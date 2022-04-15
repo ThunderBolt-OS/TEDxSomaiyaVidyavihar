@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDx SVV TEAM 2018-2019</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Scripts For Footer -->
+    <link href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'team/css/team_cards_old.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/teams_heading.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/main_title.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/team_sidenavbar.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+
+    {% endblock %}    
+
+</head>
+<body>
+    <section class="team_title">
+      <h1 class="gradient-text">Organising Team 2018-2019</h1>
+    </section>
+
+    <section class="sidenavbar">
+      <div class="side">
+        <a href="{% url 'team:index' %}" style="background:#42db34;"><strong>2021-2022</strong></a>
+        <a href="{% url 'team:team2020' %}" style="background:#3498db;"><strong>2020-2021</strong></a>
+        <a href="{% url 'team:team2019' %}" style="background:#e74c3c;"><strong>2019-2020</strong></a>
+        <a href="{% url 'team:team2017' %}" style="background:#f1c40f;"><strong>2017-2018</strong></a>
+    </div>
+    </section>
+
+    <h1 class="header">Organisers</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2022/radhaiyer.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Dr. Radha Iyer</h3>
+                  <span class="card__status">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                </div>
+              </div>
+              <p><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2022/hetaldoshi.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Hetal Doshi</h3>
+                  <span class="card__status">
+                    <i class="fas fa-envelope" href="#"></i>
+                    <i class="fas fa-phone" href="#"></i>
+                    <i class="fab fa-instagram" href="#"></i>
+                  </span>
+                </div>
+              </div>
+              <p><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Lead Curators</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2019/pratiksolanki_e.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Pratik Solanki</h3>
+                    <span class="card__status">
+                      <a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2019/yashshah1.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Yash Shah</h3>
+                    <span class="card__status">
+                      <a href="https://facebook.com/yashshhah/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com/yashshhah/" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a href="https://linkedin.com/in/yashshhah/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>     
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Curation Team</h1>
+    <section class="team_card_body">
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AashnaShetty1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Aashna Shetty</h3>
+                  <span class="card__status">
+                    <a href="https://m.facebook.com/aashna.shetty.14?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/mwlite/me" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/MurtazaHathiyari1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Murtaza Hathiyari</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/murtazafhathiyari" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/MahitaGandhi1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Mahita Gandhi</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/mahita.gandhi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/gandhi_mahita" target="_blank"><i class="fab fa-twitter"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/MuffaddalNawab1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Muffaddal Nawab</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/mufaddal.nawab.5" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/MuffaddalNawab?s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/muffaddal-nawab-818511113" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/KushagraVerma1.jpeg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Kushagra Verma</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/kushagra.c.verma" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/kay_verma" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kushagra-verma-224643113" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/SoujanyaNarsipur1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Soujanya Narsipur</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/soujanya.narsipur" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/soujanya-narsipur-16245a135" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/PiyushBhatia1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Piyush Bhatia</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/piyush.bhatia.7330" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/piyush-bhatia-886302116/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/PrabodhPatawari1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Prabodh Patawari</h3>
+                  <span class="card__status">
+                    <a href="http://linkedin.com/in/prabodhpatawari" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Sponsorship Heads</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/rupalikamra1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Rupali Kamra</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/kavyapurushothaman1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Kavya Purushothaman</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://facebook.com/yashshhah/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/yashshhah/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/yashshhah/"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>     
+      </ul>
+  </section>
+
+    <br>
+    <br>
+
+
+    <h1 class="header">Sponsorship Team</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/RashiVora1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Rashi Vora</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AditiMorade1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Aditi Morade</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/aditi.morade" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/aditi_morade?s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aditi-morade-44aa02156" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/DishaShah1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Disha Shah</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </section>
+    
+    <br>
+    <br>
+
+    <h1 class="header">Comms & Marketing Head</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AkshayShasheendran1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Akshay Shasheendran</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/itsakshayhere" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/itsakshays" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/itsakshays" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Comms & Marketting Team</h1>
+    <section class="team_card_body">
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/muditamehta1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Mudita Mehta</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/mudita.mehta.7" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/mudita-mehta-b5945aa0/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AdityaPatwardhan1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Aditya Patwardhan</h3>
+                  <span class="card__status">
+                    <a href="https://www.linkedin.com/in/aditya-patwardhan-a95581149" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/KunalBohra1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Kunal Bohra</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/kunal.bohra.735" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://mobile.twitter.com/itstheKayBee" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kunal-bohra-70895b148" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/rhythm1.png' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Rhythm Arora</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/rhythm.arora.92" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/RhythmArora19?s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/rhythm-arora-0407a5147" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/GaneshPillai1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Ganesh Pillai</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/Ganesh94" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/ganesh-pillai-11m" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+      </ul>      
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Graphic Designers</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/HarshWaichal1.jpeg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Harsh Waichal</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/harsh.waichal.18" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/cloudminer7" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/harsh-waichal-291438149" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/pranavgawde1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Pranav Gawde</h3>
+                  <span class="card__status">
+                    <a href="https://www.instagram.com/pranavgawde/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.behance.net/pranavgawde" target="_blank"><i class="fab fa-behance"></i></a>
+                    <a href="https://www.linkedin.com/in/pranavgawde/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </section>    
+
+    <br>
+    <br>
+
+    <h1 class="header">Web Development Team</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/snehasanghadia1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Sneha Sanghadia</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/shravaniJadhav1.jpeg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Shravani Jadhav</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/shravani.jadhav.71" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/shravani-jadhav-968831168/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Videography & Photography Lead</h1>
+    <section class="team_card_body">
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AryanTalathi1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Aryan Talathi</h3>
+                  <span class="card__status">
+                    <a href="https://www.facebook.com/profile.php?id=100006970488922" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/aryan_talathi" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aryan-talathi-1128a9141" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="cards">         
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2019/AADITYASHASTRI1.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Aaditya Shastri</h3>
+                  <span class="card__status">
+                    <br>
+                    <!--<a href="https://www.facebook.com/pratik.solanki.96" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-solanki-158b7b49"><i class="fab fa-linkedin-in"></i></a>-->
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </section>
+</body>
+{% include 'home/footer1.html' %}
+</html>

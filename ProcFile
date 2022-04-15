@@ -1,0 +1,1 @@
+web: gunicorn tedx_svv_2022.wsgi

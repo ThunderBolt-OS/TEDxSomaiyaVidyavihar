@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Speakers 2020 - Shots Season 1</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <!--<link rel="stylesheet" href="{% static 'home/css/style.css'%}">-->
+        <!-- STYLES -->
+        {% block style %}
+            <!--<link rel="stylesheet" href="{% static 'home/css/style.css'%}">-->
+            <link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/style.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/side_navbar.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/popup.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/main_title.css'%}">
+            <!--<link rel="stylesheet" href="{% static 'speakers/css/testpop.css'%}">-->
+            <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+        {% endblock %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+    <body>
+      <br>
+      <section class="team_title">
+        <h1 class="gradient-text">Speakers 2020 - Shots Season 1</h1>
+      </section>
+        <section class="sidenavbar">
+            <div class="side">
+              <a href="{% url 'speakers:index' %}" style="background:#42db34;"><strong>Speakers 2022</strong></a>
+              <a href="{% url 'speakers:speakers2021' %}" style="background:#3498db;"><strong>Speakers 2021</strong></a>
+              <a href="{% url 'speakers:speakers2019' %}" style="background:#e74c3c;"><strong>Speakers 2019</strong></a>
+              <a href="{% url 'speakers:speakers2018' %}" style="background:#f1c40f;"><strong>Speakers 2018</strong></a>
+              <a href="{% url 'speakers:speakers2017' %}" style="background:#9b0fbe;"><strong>Speakers 2017</strong></a>
+          </div>
+        </section>
+        <section class="speakers_main">
+            
+            <div id="app" class="container-speakers">
+              <button data-modal-target="#first" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/flubber.jpg' %}">
+                      <h1 slot="header">Martin D'Souza</h1>
+                      <h2 slot="content">Flubber The Clown</h2>
+                    </card>
+                <!--</a>-->
+              </button>
+
+              <button data-modal-target="#second" class="btn">
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/zeba.jpeg' %}">
+                      <h1 slot="header">Zeba <br> Kohli</h1>
+                      <h2 slot="content">Chocolatier</h2>
+                    </card>
+                <!--</a>    -->
+              </button>
+            
+              <button data-modal-target="#third" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/vernon.jpg' %}">
+                      <h1 slot="header">Vehrnon Ibrahim</h1>
+                      <h2 slot="content">Music Business Manager</h2>
+                    </card>
+                <!--</a>    -->
+              </button>
+              
+              <button data-modal-target="#forth" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/mital.jpg' %}">
+                      <h1 slot="header">Mital <br> Salia</h1>
+                      <h2 slot="content">Game Therapist</h2>
+                    </card>
+                <!--</a>    -->
+              </button>
+
+              <button data-modal-target="#fifth" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/pups.jpg' %}">
+                      <h1 slot="header">Ruchita Parpani</h1>
+                      <h2 slot="content">Pet Stylist</h2>
+                    </card>
+                <!--</a>    -->
+              </button>
+
+              <button data-modal-target="#sixth" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/swati.jpg' %}">
+                      <h1 slot="header">Swati <br> Jain</h1>
+                      <h2 slot="content">Ed. Content Creator</h2>
+                    </card>
+                <!--</a>-->    
+              </button>
+
+              <button data-modal-target="#seventh" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/samar.jpg' %}">
+                      <h1 slot="header">Samar Farooqui</h1>
+                      <h2 slot="content">Professional Slackliner</h2>
+                    </card>
+                <!--</a>-->    
+              </button>
+
+              <button data-modal-target="#eighth" class="btn" >
+                <!--<a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank">-->
+                    <card data-image="{% static 'speakers/img/2020/winston.jpg' %}">
+                      <h1 slot="header">Winston Travasso</h1>
+                      <h2 slot="content">Opera Singer</h2>
+                    </card>
+                <!--</a>-->    
+              </button>
+
+            </div>
+
+        </section>
+
+
+        <section>
+          <div class="modal" id="first">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/flubber.jpg' %}"></a>
+                  <h1 class="name">Martin D'Souza</h1>
+                  <h2 class="proffession">Flubber the Clown</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/martinflubberdsouza/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Making someone laugh is a quite difficult thing to do. Do you think you have it in you?<br>Meet Flubber a.k.a Mr Martin D'Souza, who is bringing laughter to faces and joy to the world in his own way! Watch this TEDxSomaiya Shot where he talks about Clowning as a profession!
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+
+          <!-- 2ND -->
+          <div class="modal" id="second">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/zeba.jpeg' %}"></a>
+                  <h1 class="name">Zeba Kohli</h1>
+                  <h2 class="proffession">Chocolatier</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/zebakohli/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Have you ever thought about what it would be like stepping into Willy Wonka's shoes, brewing coco magic and bringing happiness with chocolate filled smiles?<br>Watch this TEDxSomaiya Shot featuring Zeba Kohli, owner of Fantasie Fine Chocolates & Confectionery, a leading brand of Premium chocolates, and all we can say is “Chocolate is OUR science of living”
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 3RD -->
+          <div class="modal" id="third">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/vernon.jpg' %}"></a>
+                  <h1 class="name">Vehrnon Ibrahim</h1>
+                  <h2 class="proffession">The '80s Rockstar</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/vehrnon/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">You know what actually gets the party going? Its not the lights or the food, its the vibrating music that resonates with your soul.<br>“Unorthodox careers, unusual career paths they are not an option, they are a necessity”<br>Watch the incredible rockstar of the 80’s, Vehrnon Ibrahim, a Music History And Business Teacher, as he talks about music, and why he chose this path of life - only on TEDxSomaiya Shots!
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 4TH -->
+          <div class="modal" id="forth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/mital.jpg' %}"></a>
+                  <h1 class="name">Mital Salia</h1>
+                  <h2 class="proffession">Game Therapist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/mitalsalia/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Have you ever wondered that games could heal you? Ever thought about how games could impact your brain and social behavior?<br>Check out this TEDxSomaiya Shot where Mital Salia, a game therapist, psychologist and an experiential educator talks about her research on board games. What's more interesting than something where you can have fun and build yourself at the same time!
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 5TH -->
+          <div class="modal" id="fifth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/pups.jpg' %}"></a>
+                  <h1 class="name">Ruchita Parpani</h1>
+                  <h2 class="proffession">Pet Stylist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/namastepets_grooming/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Love animals?<br>Love being around dogs or cats?<br> Here is Ruchita Parpani, to explain what it's like grooming pets for a living! Join in to TEDxSomaiya Shots to find out what a typical day in a pet groomer's life is like and how rewarding it can be as a profession. Learn about her passion for animals and how you too, with commitment and dedication, can follow your dreams.
+                  </div>
+                  <ul class="social-icons list-unstyled list-inline">
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 6TH -->
+          <div class="modal" id="sixth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/swati.jpg' %}"></a>
+                  <h1 class="name">Swati Jain</h1>
+                  <h2 class="proffession">Educational Content Creator</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/swati-jain-92058373/"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Ever wondered how you could engage your child in learning while simultaneously making it an enjoyable experience? Swati Jain and her company, Shikshanand, blend the wonderful world of games with education and learning to come to your rescue! Learn about Swati's passion for her field and how she made the bold choice to make designing educational games her career by tuning in to TEDxSomaiya Shots.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 7TH -->
+          <div class="modal" id="seventh">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/samar.jpg' %}"></a>
+                  <h1 class="name">Samar Farooqui</h1>
+                  <h2 class="proffession">Professional Slackliner</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/faroutsamar/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Love adventure sports? Then you're gonna love Samar Farooqui, India's first professional Slack Liner.<br>He’s used to performing extreme feats of danger everyday, enjoying life to the fullest! Learn about this extreme sport and about Samar's Life of Glory & Adventure on TEDxSomaiya Shots.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 8TH -->
+          <div class="modal" id="eighth">
+            
+            <div class="close_btn ">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2020/winston.jpg' %}"></a>
+                  <h1 class="name">Winston Travasso</h1>
+                  <h2 class="proffession">Opera Singer</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/winstontravasso/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Have you seen an opera singer in India? Or wondered what it's like to make your passion your career?<br>Winston Travasso, an Indian opera singer, speaks about what it's like to do something different with your career, what opera singing is all about, and what it means to follow this type of career in India - only on TEDxSomaiya Shots!</div>
+                </div>
+              </aside>
+
+            </div>
+            
+  
+          </div>
+
+          <div id="overlay"></div>
+
+        </section>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{% static 'speakers/js/index.js'%}"></script>
+        <script src="{% static 'speakers/js/popup.js'%}"></script>
+
+    </body>
+    {% include 'home/footer1.html' %}
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Speakers 2018</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <!-- STYLES -->
+        {% block style %}
+            <!-- <link rel="stylesheet" href="{% static 'home/css/style.css'%}"> -->
+            <link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/style.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/side_navbar.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/popup.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/main_title.css'%}">
+            <!--<link rel="stylesheet" href="{% static 'speakers/css/testpop.css'%}">-->
+            <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+        {% endblock %}    
+
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+    <body>
+      <br>
+      <section class="team_title">
+        <h1 class="gradient-text">Speakers 2018</h1>
+      </section>
+
+        <section class="sidenavbar">
+            <div class="side">
+              <a href="{% url 'speakers:index' %}" style="background:#42db34;"><strong>Speakers 2022</strong></a>
+              <a href="{% url 'speakers:speakers2021' %}" style="background:#3498db;"><strong>Speakers 2021</strong></a>
+              <a href="{% url 'speakers:speakers2020' %}" style="background:#e74c3c;"><strong>Speakers 2020</strong></a>
+              <a href="{% url 'speakers:speakers2019' %}" style="background:#f1c40f;"><strong>Speakers 2019</strong></a>
+              <a href="{% url 'speakers:speakers2017' %}" style="background:#9b0fbe;"><strong>Speakers 2017</strong></a>
+          </div>
+        </section>
+        <section class="speakers_main">
+            
+            <div id="app" class="container-speakers">
+              <button data-modal-target="#first" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/jayt.jpg' %}">
+                  <h1 slot="header">Jay Thadeshwar</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+              <button data-modal-target="#second" class="btn">
+                <card data-image="{% static 'speakers/img/2018/aditya.png' %}">
+                  <h1 slot="header">Aditya<br>Joshi</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+            </button>
+            <button data-modal-target="#third" class="btn" >
+              <card data-image="{% static 'speakers/img/2018/hemali.jpg' %}">
+                <h1 slot="header">Hemali Vadalia</h1>
+                <!-- <h2 slot="content">CEO Google</h2> -->
+              </card>
+            </button>
+              
+              <button data-modal-target="#forth" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/nischal_dwivedi.jpg' %}">
+                  <h1 slot="header">Nishchal Dwivedi</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+              <button data-modal-target="#fifth" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/mehak.jpg' %}">
+                  <h1 slot="header">Mehak Mirza Prabhu</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+              <button data-modal-target="#sixth" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/shikhar.jpg' %}">
+                  <h1 slot="header">Shikar Kamat</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+              <button data-modal-target="#seventh" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/colsundaresan.jpg' %}">
+                  <h1 slot="header">Col.<br>Sundaresan</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+              <button data-modal-target="#eighth" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/prasannaseshadri.jpg' %}">
+                  <h1 slot="header">Prassana Seshadri</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+              <button data-modal-target="#ninth" class="btn" >
+                <card data-image="{% static 'speakers/img/2018/alif.jpg' %}">
+                  <h1 slot="header">Mohamaad & Hardik</h1>
+                  <!-- <h2 slot="content">CEO Google</h2> -->
+                </card>
+              </button>
+
+            </div>
+
+        </section>
+
+        <section>
+          <div class="modal" id="first">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/jayt.jpg' %}"></a>
+                  <h1 class="name">Jay Thadeshwar</h1>
+                  <h2 class="proffession">Founder & CEO at Poised Media</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/jaythadeshwar/"><i class="fab fa-linkedin-in"></i></a></li>&nbsp;&nbsp;
+                    <li><a href="https://www.instagram.com/jay.thadeshwar/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                    <li><a href="https://www.facebook.com/jaythadeshwar"><i class="fab fa-facebook-f"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">A difficult childhood and a severe OCD failed to hamper digital marketing professional and innovator, Jay Thadeshwar’s resilience and his will to launch a startup. Founded in 2015, digital advertising agency Poised Media specializes in strategy driven digital marketing and interactive digital experiences, and has been a pioneer in providing interactive solutions on WhatsApp. Started as a one-man agency, Poised Media has grown to have 3 offices, including one in Dubai, 30 members and a name in the industry.</div>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+
+          <!-- 2ND -->
+          <div class="modal" id="second">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/aditya.png' %}"></a>
+                  <h1 class="name">Aditya Joshi</h1>
+                  <h2 class="proffession">A.I. Researcher and LGBTQ activist Computational Sarcasm</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://twitter.com/aadi_joshi"><i class="fab fa-twitter"></i></a></li>&nbsp;&nbsp;
+                    <li><a href="https://www.instagram.com/joshyaa/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Dr. Aditya Joshi is a researcher in natural language processing (NLP), dealing primarily with sentimental analysis. His publications are based on novel aspects of NLP - drunk-texting prediction, political affiliation prediction, etc. and so is his PhD thesis on ‘Computational Sarcasm’, that has resulted in first-of- their-kind techniques to detect sarcasm in text and generate sarcastic responses. As an openly out person, he was a core team member of Saathi, the LGBT support group of IIT Bombay. In 2015, he co-created the Saathi Connect project - a multimedia anthology of 10 video interviews and 90+ written stories of LGBTQ Indians in Marathi and Hindi. Besides writing LGBTQ-themed journalistic pieces, he has co-translated a book on parents of LGBTQ people from Marathi; and directed a Marathi short film. A frequent keynote speaker at various universities and organizations, his work has been profiled in prominent news platforms such as The New York Times and MIT Technology Review.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 3RD -->
+          <div class="modal" id="third">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/hemali.jpg' %}"></a>
+                  <h1 class="name">Hemali Vadalia</h1>
+                  <h2 class="proffession">Painter, Animator & Rangoli Artist Loving Vincent</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/hemalivadalia/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Hemali Vadalia’s life revolves around painting, animation and rangolis. Hailing from an unlikely background of computer engineering, her creative and artistic inclinations lead her to pursue post graduation in Animation Design from IDC, IIT Bombay. Exposure to the paintings of classical masters there inspired her to travel to Italy to study classical realism at Ateliers in Florence. Working as a painter-animator for the world’s first fully painted feature film - ‘Loving Vincent’ gave Hemali an opportunity to blend her interests of oil painting and animation. Apart from this, she has also worked on digital restoration of the Ajanta Cave Paintings.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 4TH -->
+          <div class="modal" id="forth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/nischal_dwivedi.jpg' %}"></a>
+                  <h1 class="name">Nishchal Dwivedi</h1>
+                  <h2 class="proffession">Researcher in Theoretical Physics</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/nishchaldwivedi/"><i class="fab fa-linkedin-in"></i></a></li>&nbsp;&nbsp;
+                    <li><a href="https://www.instagram.com/awriterclicks/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Nishchal Dwivedi, is a research fellow in Bhabha Atomic Research Centre, whose work primarily focuses on understanding the nuclear structure and its behaviour as complex quantum systems. A recipient of Dr Shankar Dayal Sharma Gold Medal, Nishchal has represented India at Lindau Nobel Laureate Meet and Asian Science Camp 2010. As a physicist with an inclination towards the philosophy of life, he also works on problems related to mathematical interpretation of social dilemma. Apart from being a visiting faculty at various colleges, he is actively involved with Tata Institute of Fundamental Research to promote public outreach of science and is constantly working on developing teaching methods to make students more creative.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 5TH -->
+          <div class="modal" id="fifth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/mehak.jpg' %}"></a>
+                  <h1 class="name">Mehak Mirza Prabhu</h1>
+                  <h2 class="proffession">Storyteller, Writter & Performer</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/mehak.mirza.prabhu/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Storyteller, writer, blogger, performer and former entrepreneur Mehak Mirza Prabhu’s life is a perfect example of the saying ‘when life gives you lemons, make lemonade’. With life taking twists at the most unexpected times, she rediscovered herself through various mediums, most importantly - writing. Her online storytelling school, 'Jhumritaliaya', is dedicated towards merging classic storytelling form with original stories that reflect recent times. A social reform enthusiast, she has featured in the campaign The Bridge Talks, an initiative by Caravan Magazine that lays emphasis on gender empowerment. In addition to this, she has also collaborated with Alif’s Mohammad Muneem for a duet storytelling act on child abuse that was recently performed at IIT Bombay. Her story ‘Phir Mohobbat Karni Hai’ has gained over 3M views across various digital platforms.</div>
+                  <ul class="social-icons list-unstyled list-inline">
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 6TH -->
+          <div class="modal" id="sixth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/shikhar.jpg' %}"></a>
+                  <h1 class="name">Shikar Kamat</h1>
+                  <h2 class="proffession">Psychological Illusionist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/shikharkamat/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Psychological illusionist Shikhar Kamat is one-of-a-kind performer known for mixing lesser known psychological methods with traditional magic and human behaviour to create a new form of modern magic. Furthermore, he employs a combination of other skills in his acts such as reading micro-expressions and body language, hypnosis, psychological suggestion, influence, etc. As an avid storyteller, he loves writing and creating each of his shows with a focus on crafting a wonderful experience using a fusion of magic and stories. Having started out on the streets and at bars and restaurants, he has grown to perform in big ticket shows for Fortune 500 corporates, events for national and international leaders of state and recently headlined at The United Nations Young Changemakers Conclave 2018, all of which have earned him widespread appreciation.
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 7TH -->
+          <div class="modal" id="seventh">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/colsundaresan.jpg' %}"></a>
+                  <h1 class="name">COL. Sundaresan</h1>
+                  <h2 class="proffession">Ultra Marathon Runner, Retd. Indian Army Officer</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/sundaresan-86586816/"><i class="fab fa-linkedin-in"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Lt Col Sundaresan R (retd), is the man behind the “Run with a soldier, Run for a soldier” mission who successfully completed his goal of running 50 Full marathons (42.2 kms) in 50 consecutive weeks over 50 locations/routes. After serving in the army for 23 years, he decided to do something for those who’ve lost their lives in the line of duty and thought of aligning his passion for running with this line of thought. Throughout his journey, spread over 23 states and UTs, he addressed corporate offices, educational institutions and running clubs, spreading awareness about the Indian Army, Physical Fitness, Marathons and Ultramarathons and his mission of 50 Marathons. In the process he raised approximately 27 lakhs for families of martyred Soldiers. He has been awarded the “Most Inspirational Runner” by Mumbai Road runners in Feb 2018.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 8TH -->
+          <div class="modal" id="eighth">
+            
+            <div class="close_btn ">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/prasannaseshadri.jpg' %}"></a>
+                  <h1 class="name">Prassana Seshadri</h1>
+                  <h2 class="proffession">Puzzle Master and Director of World Puzzle Federation</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/prasanna-seshadri-4aba7170/"><i class="fab fa-linkedin-in"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Prasanna Seshadri is a puzzle master who has achieved quite a few feats in the art of puzzle making and solving. In a society where puzzles are not a part of mainstream culture, a huge interest in puzzles lead him to consider the possibility of having a future in ventures related to it. He has been a regular on both the Indian Puzzle team and the Indian Sudoku team and holds best ranking by an Indian at World Sudoku championship and WPF World Puzzle Grand Prix. In 2016, he was elected to the Board of the World Puzzle Federation, and within a year he was elected as the Director of the World Puzzle Federation.
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+  
+          </div>
+
+
+          <!-- 9TH -->
+          <div class="modal" id="ninth">
+            
+            <div class="close_btn ">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2018/alif.jpg' %}"></a>
+                  <h1 class="name">Mohamaad & Hardik</h1>
+                  <h2 class="proffession">Sufi Rock Band</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/hardikv/?hl=en"><i class="fab fa-instagram"></i></a></li>&nbsp;&nbsp;
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Co-founded in 2008 by Mohammad Muneem Nazir and Hardik Vaghela, Alif is a band that is based in Pune but rooted in Kashmir. Mohommad Muneem, who hails from Srinagar, is the lead vocalist and songwriter of Alif and also teaches Urdu Poetry at Symbiosis College of Arts and Commerce through a course called Sarir-e-Khamma. Baroda born Hardik Vaghela, who plays keyboard/piano for Alif, teaches at Swadhaa School and is also a music producer. Besides Alif, Mohommad and Hardik have also co-founded Muziclub, a music training services company which has over 2000 active students. Winner of IRAA Award for the single "Like a Sufi", Alif’s music is an alluring blend of various ethnic flavours and different genres that results in beautifully crafted contemporary poetries written in Urdu and Kashmiri.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+  
+          </div>
+          <div id="overlay"></div>
+
+        </section>
+
+
+
+        <script src="https://kit.fontawesome.com/c30dffc46d.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{% static 'speakers/js/index.js'%}"></script>
+        <script src="{% static 'speakers/js/popup.js'%}"></script>
+
+    </body>
+    {% include 'home/footer1.html' %}
+</html>

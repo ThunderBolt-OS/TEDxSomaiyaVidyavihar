@@ -1,0 +1,151 @@
+<!doctype html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+  <head>
+  	<title>Connect Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+	<link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'contactUs/css/test.css' %}">
+      <link rel="stylesheet" href="{% static 'contactUs/css/contactus_form_heading.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+      <!-- <link rel="stylesheet" href="{% static 'contactUs/css/particle_bg.css' %}"> -->
+    {% endblock %}  
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!-- FAVICON -->
+	<link rel="icon" type="image/png" sizes="32x32" href="https://thunderbolt-os.github.io/TEDx19/images/tedfavicon.ico">
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container-contact">
+			
+			<div class="row-contact justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper-form">
+						<div class="row-contact no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4 header">Contact Us</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form action="/contactUs/" method="POST" id="contactForm" name="contactForm" class="contactForm">
+										{% csrf_token %}
+										<div class="row-contact">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Full Name</label>
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name Surname">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Email Address</label>
+													<input type="email" class="form-control" name="email" id="email" placeholder="name@gmail.com">
+												</div>
+											</div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Phone No.</label>
+                                                    <input type="phone" class="form-control" name="phn_num" id="phn_num" placeholder="9876543210">
+                                                </div>
+                                            </div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="subject">Subject</label>
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject to Contact">
+												</div>
+											</div>
+											<!--<div class="col-md-12">
+												<div class="category inputBox">
+                                                    <input type="radio" name="category" value="PR Query">
+                                                    <label for="PR Query">PR Query</label>
+                                                    <input type="radio" name="category" value="Brand Query">
+                                                    <label for="Brand Query">Brand Query</label>
+                                                    <input type="radio" name="category" value="General">
+                                                    <label for="General">General</label>
+                                                </div>
+											</div>-->
+											
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="#">Your feedback/suggestions:</label>
+													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary-1 w-100 p-md-5 p-4">
+									<h3>We are Here!</h3>
+									<p class="mb-4">We're open for any suggestion or just to share ideas</p>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center" onclick="window.open('https://www.google.com/maps/place/TEDxSomaiyaVidyavihar/@19.0735074,72.8973566,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c7c1af89b25f:0x22290fecb5f571e9!8m2!3d19.0735074!4d72.8995453')">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><a href="https://www.google.com/maps/place/TEDxSomaiyaVidyavihar/@19.0735074,72.8973566,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c7c1af89b25f:0x22290fecb5f571e9!8m2!3d19.0735074!4d72.8995453" target="_blank"><span class="bold-text">Address:</span></a> Somaiya Vidyavihar, 520 RiiDL Bhaskarachraya, Vidyavihar (E), Mumbai, Maharashtra 400077</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center icon-1">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p>Avyay: <a href="tel:9167426667"><span class="bold-text">+91 9167426667</span></a></p>
+								<p>Ridhima: <a href="tel:9137866724"><span class="bold-text">+91 9137866724</span></a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center" onclick="window.open('mailto:tedxsomaiyavidyavihar@somaiya.edu')">
+				        			<span class="fa fa-envelope"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><a href="mailto:tedxsomaiyavidyavihar@somaiya.edu" target="_blank"><span class="bold-text">Email</span></a> us for queries</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center" onclick="window.open('https://www.instagram.com/tedxsomaiyavidyavihar/')">
+				        			<span class="fa fa-instagram"></span>
+								</div>
+				        		<div class="text pl-3">
+					            <p>Visit our <a href="https://www.instagram.com/tedxsomaiyavidyavihar/" target="_blank"><span class="bold-text">Instagram</span></a>!</p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <script src="{% static 'contactUs/js/jquery.min.js' %}"></script>
+  <script src="{% static 'contactUs/js/popper.js' %}"></script>
+  <script src="{% static 'contactUs/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'contactUs/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'contactUs/js/main.js' %}"></script>
+
+	</body>
+	{% include 'home/footer1.html' %}
+</html>
+

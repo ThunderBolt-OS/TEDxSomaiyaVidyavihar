@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Speakers 2019</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <!-- STYLES -->
+        {% block style %}
+            <!-- <link rel="stylesheet" href="{% static 'home/css/style.css'%}"> -->
+            <link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/style.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/side_navbar.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/popup.css'%}">
+            <link rel="stylesheet" href="{% static 'speakers/css/main_title.css'%}">
+            <!--<link rel="stylesheet" href="{% static 'speakers/css/testpop.css'%}">-->
+            <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+        {% endblock %}    
+
+        
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+    </head>
+    <body>
+      <br>
+      <section class="team_title">
+        <h1 class="gradient-text">Speakers 2019</h1>
+      </section>
+
+        <section class="sidenavbar">
+            <div class="side">
+              <a href="{% url 'speakers:index' %}" style="background:#42db34;"><strong>Speakers 2022</strong></a>
+              <a href="{% url 'speakers:speakers2021' %}" style="background:#3498db;"><strong>Speakers 2021</strong></a>
+              <a href="{% url 'speakers:speakers2020' %}" style="background:#e74c3c;"><strong>Speakers 2020</strong></a>
+              <a href="{% url 'speakers:speakers2018' %}" style="background:#f1c40f;"><strong>Speakers 2018</strong></a>
+              <a href="{% url 'speakers:speakers2017' %}" style="background:#9b0fbe;"><strong>Speakers 2017</strong></a>
+          </div>
+        </section>
+        <section class="speakers_main">
+            
+            <div id="app" class="container-speakers">
+              <button data-modal-target="#first" class="btn">
+                <card data-image="{% static 'speakers/img/2019/Saurabh_gupta.jpg' %}">
+                  <h1 slot="header">Saurabh Gupta</h1>
+                  <h1>&emsp;</h1>
+                </card>
+              </button>
+              <button data-modal-target="#second" class="btn">
+                <card data-image="{% static 'speakers/img/2019/Coomi_vevaina.jpg' %}">
+                  <h1 slot="header">Dr. Coomi Vevaina</h1>
+                </card>
+            </button>
+            <button data-modal-target="#third" class="btn" >
+              <card data-image="{% static 'speakers/img/2019/Mehek.jpg' %}">
+                <h1 slot="header">Mehek Malhotra</h1>
+              </card>
+            </button>
+              
+              <button data-modal-target="#forth" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/Nuru_Karim.jpg' %}">
+                  <h1 slot="header">Nuru<br> Karim</h1>
+                </card>
+              </button>
+
+              <button data-modal-target="#eighth" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/Mazda_turel.jpg' %}">
+                  <h1 slot="header">Mazda<br>Turel</h1>
+                </card>
+              </button>
+
+              <button data-modal-target="#fifth" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/nadia.jpg' %}">
+                  <h1 slot="header">Nadia Nooreyezdan</h1>
+                </card>
+              </button>
+
+              <button data-modal-target="#sixth" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/kavish_seth.jpg' %}">
+                  <h1 slot="header">Kavish<br>Seth</h1>
+                </card>
+              </button>
+
+              <button data-modal-target="#seventh" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/prashant_momaya.png' %}">
+                  <h1 slot="header">Prashant Momaya</h1>
+                </card>
+              </button>              
+
+              <button data-modal-target="#ninth" class="btn" >
+                <card data-image="{% static 'speakers/img/2019/abhijit.jpg' %}">
+                  <h1 slot="header">Abhijit Jejurikar</h1>
+                </card>
+              </button>
+
+            </div>
+
+        </section>
+        
+        <section>
+          <div class="modal" id="first">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/Saurabh_gupta.jpg' %}"></a>
+                  <h1 class="name">Saurabh Gupta</h1>
+                  <h2 class="proffession">Founder & Director - Earth5</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/saurabhguptaearth5r/"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">A renowned environmentalist and a social entrepreneur, Saurabh Gupta is the founder and director of Earth5R, and winner of the Young Leader India-France award, who is bringing a Paradigm Shift, one locality at a time.
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+
+          <!-- 2ND -->
+          <div class="modal" id="second">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/Coomi_vevaina.jpg' %}"></a>
+                  <h1 class="name">Dr. Coomi Vevaina</h1>
+                  <h2 class="proffession">Education Futurist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/dr-coomi-vevaina-b141a819/"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">An educator, storyteller, researcher, and author, Dr. Coomi Vevaina is the former head of the Department of English, MU. She has authored 10 books and 58 articles in various prestigious journals and has also authored several stories for children like “Bernice Banana” and “Angry Angara".
+                  </div>
+                 </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 3RD -->
+          <div class="modal" id="third">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/Mehek.jpg' %}"></a>
+                  <h1 class="name">Mehek Malhotra</h1>
+                  <h2 class="proffession">Visual Artist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/giggling_monkey/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Mehek Malhotra is the CEO of Giggling Monkey Studio where she has designed many cool and popular logos that we see daily. She has won many accolades like the 25 under 25 by campus diaries, VH1 and TATA Nano in 2016.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 4TH -->
+          <div class="modal" id="forth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/Nuru_Karim.jpg' %}"></a>
+                  <h1 class="name">Nuru Karim</h1>
+                  <h2 class="proffession">Architect</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/nurukarim/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">
+                    Nuru Karim is the founder and design principal of Nudes, a cross-disciplinary practice of public art, architecture-urbanism and design optimisation/fabrication powered by digital 'making' tools. His works have received several awards including a nomination for the Aga Khan Award for Architecture in the 2013 cycle. </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 5TH -->
+          <div class="modal" id="fifth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/nadia.jpg' %}"></a>
+                  <h1 class="name">Nadia Nooreyezdan</h1>
+                  <h2 class="proffession">Culture Editor @The Swaddle</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/nadia.nooreyezdan/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Nadia Nooreyezdan is the culture editor of The Swaddle, India’s only health and culture media platform with a strong feminist lens. Her articles cover issues at the intersection of gender and politics. She is invested in feminist theory, pop culture, and queering everything.
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 6TH -->
+          <div class="modal" id="sixth">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/kavish_seth.jpg' %}"></a>
+                  <h1 class="name">Kavish Seth</h1>
+                  <h2 class="proffession">Psychological Illusionist!</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/kavishseth_/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Kavish Seth is an independent artist, singer, songwriter, poet who writes primarily in Hindustani. Kavish invented his own instrument, Noori, a hybrid 14-stringed instrument to produce his own sound and connect with more people.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 7TH -->
+          <div class="modal" id="seventh">
+            <div class="close_btn">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/prashant_momaya.png' %}"></a>
+                  <h1 class="name">Prashant Momaya</h1>
+                  <h2 class="proffession">Data Scientist</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/prashantmomaya/"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Prashant Momaya, an M.Tech in Chemical Engineering from IIT Delhi, is a data scientist who is the Customer Consulting Leader of Tableau Software, India, and is responsible for presales and customer success in the country. 
+                  </div>
+                 </div>
+              </aside>
+
+            </div>
+            
+          </div>
+
+          <!-- 8TH -->
+          <div class="modal" id="eighth">
+            
+            <div class="close_btn ">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/Mazda_turel.jpg' %}"></a>
+                  <h1 class="name">Mazda Turel</h1>
+                  <h2 class="proffession">Neurosurgeon</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.linkedin.com/in/mazda-turel-a5605b29/"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Dr. Mazda K. Turel is a prolific researcher who has 80 publications in reputed scientific journals. His specialisation is the treatment of diseases of the brain and spine and is known for bringing a new approach to neurosurgery that is both balanced and aggressive.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+  
+          </div>
+
+          <div class="modal" id="ninth">
+            
+            <div class="close_btn ">
+              <button data-close-button class="close-button cross_btn">&times;</button>
+            </div>
+            <div class="mode-body" style="height: 20em;">
+              <aside class="profile-card">
+                <header>
+                  <a><img class="card_image" src="{% static 'speakers/img/2019/abhijit.jpg' %}"></a>
+                  <h1 class="name">Abhijit Jejurikar</h1>
+                  <h2 class="proffession">Founder & Curator @Dharavi Reloaded</h2>
+                  <ul class="social-icons list-unstyled list-inline">
+                    <li><a href="https://www.instagram.com/zezumusic/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </header>
+                <div class="profile-bio">
+                  <div class="desp">Abhijit Jejurikar, the founder and curator of Dharavi Reloaded, is a marketing professional by day and musician by night.  Dharavi reloaded is a music project that provides a platform for the kids in Dharavi to showcase their talents using junk-percussions.</div>
+                </div>
+              </aside>
+
+            </div>
+            
+  
+          </div>
+          <div id="overlay"></div>
+
+        </section>
+
+
+
+        <script src="https://kit.fontawesome.com/c30dffc46d.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{% static 'speakers/js/index.js'%}"></script>
+        <script src="{% static 'speakers/js/popup.js'%}"></script>
+
+    </body>
+    {% include 'home/footer1.html' %}
+</html>

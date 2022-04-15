@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
+    <title>TEDx SVV Sponsors</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/footer.css' %}">
+    <script src="//kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Scripts For Footer -->
+    <link href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'sponsors/css/sponsor_cards.css' %}">
+      <link rel="stylesheet" href="{% static 'sponsors/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'sponsors/css/main_title.css' %}">
+      <link rel="stylesheet" href="{% static 'sponsors/css/sponsor_sidenavbar.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+
+    {% endblock %}  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+  <main>
+    <section class="team_title">
+      <h1 class="gradient-text">Sponsors</h1>
+    </section>
+    <div class='p'>
+      <div class='sponsorsFooter 1'>
+
+        <h1 id="sponsorTitle1" data-default-title-1="<strong>2019</strong>"><strong>2019</strong></h1>
+        <ul>
+
+          <span data-group-title-1="Gold Sponsor">						
+                <li><img src="{% static 'sponsors/img/upl.png' %}"></li>
+                <li><img src="{% static 'sponsors/img/poised.png' %}"></li>
+                <li><img src="{% static 'sponsors/img/ramada.jpg' %}"></li>
+          </span>
+          <span data-group-title-1="Online Media Partner">
+                <li><img src="{% static 'sponsors/img/yourstory.png' %}" ></li>
+                <li><img src="{% static 'sponsors/img/festpav.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Mobility Partner">
+                <li><img src="{% static 'sponsors/img/uber.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Food Partner">
+                <li><img src="{% static 'sponsors/img/box8.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Beverage Partner">
+                <li><img src="{% static 'sponsors/img/cocacola.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Hydration Partner">
+            <li><img src="{% static 'sponsors/img/ocean.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Gifting Partner">
+            <li><img src="{% static 'sponsors/img/thesouledstore.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Student Partner">
+            <li><img src="{% static 'sponsors/img/frapp.png' %}" ></li>
+          </span>
+          <span data-group-title-1="SMS Partner">
+            <li><img src="{% static 'sponsors/img/domainadda.png' %}" ></li>
+          </span>
+          <span data-group-title-1="Design Partner">
+            <li><img src="{% static 'sponsors/img/thedesignway.jpg' %}" ></li>
+          </span>
+          <span data-group-title-1="Fashion Partner">
+            <li><img src="{% static 'sponsors/img/arihant.png' %}" ></li>
+          </span>
+        </ul>
+      </div>
+    </div>
+    <div class="arrow">
+      
+    </div>
+    <div class='p'>
+      <div class='sponsorsFooter 2'>
+
+        <h1 id="sponsorTitle2" data-default-title-2="<strong>2018</strong>"><strong>2018</strong></h1>
+        <ul>
+
+          <span data-group-title-2="Food Partner">
+                <li><img src="{% static 'sponsors/img/box8.png' %}" ></li>
+          </span>
+          <span data-group-title-2="Beverage Partner">
+                <li><img src="{% static 'sponsors/img/cocacola.png' %}" ></li>
+          </span>
+          <span data-group-title-2="Gifting Partner">
+            <li><img src="{% static 'sponsors/img/thesouledstore.png' %}" ></li>
+          </span>
+          <span data-group-title-2="Snack Partner">
+            <li><img src="{% static 'sponsors/img/frapp.png' %}" ></li>
+          </span>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+  var __sf1 = $(".sponsorsFooter.1 ul span");
+  var __sf2 = $(".sponsorsFooter.2 ul span");
+var __sf_cont1 = $(".sponsorsFooter.1 ul");
+var __sf_cont2 = $(".sponsorsFooter.2 ul");
+var __title1 = $("#sponsorTitle1");
+var __title2 = $("#sponsorTitle2");
+
+__sf1.mouseenter(function() {
+  $(this).addClass('hover');
+  __sf_cont1.addClass('enter');
+  var __setTitle = $(this).attr("data-group-title-1");
+  __title1.html(__setTitle);
+})
+__sf1.mouseleave(function() {
+  $(this).removeClass('hover');
+  __sf_cont1.removeClass('enter');
+  var __setTitle = $(__title1).attr("data-default-title-1");
+  __title1.html(__setTitle);
+});
+
+__sf2.mouseenter(function() {
+  $(this).addClass('hover');
+  __sf_cont2.addClass('enter');
+  var __setTitle = $(this).attr("data-group-title-2");
+  __title2.html(__setTitle);
+}).mouseleave(function() {
+  $(this).removeClass('hover');
+  __sf_cont2.removeClass('enter');
+  var __setTitle = $(__title2).attr("data-default-title-2");
+  __title2.html(__setTitle);
+});
+</script>
+{% include 'home/footer1.html' %}
+</html>

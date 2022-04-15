@@ -1,0 +1,32 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//kit.fontawesome.com/a076d05399.js"></script>
+    <link href="{% static 'home/js/index.js'%}">
+</head>
+<nav class="col-xs-16">
+    <a href="/">
+        <div class="logo">
+            <img src="https://thunderbolt-os.github.io/tedxsvv-home/imgs/TEDxlogob.svg" alt="TEDxlogo">
+        </div>
+    </a>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="wrapper">
+        <div class="slider-thumb"></div>
+        <ul class="menu">
+            <li><span class="nav-option"><a href="/">Home</a></span></li>
+            <li><span class="nav-option"><a href="/#about-section" onclick="aboutClick()">About</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'speakers:index' %}">Speakers</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'events:index' %}">Events</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'team:index' %}">Teams</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'sponsors:index' %}">Sponsors</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'blogs:blogposts' %}">Blog</a></span></li>
+            <li><span class="nav-option"><a href="{% url 'contactUs:index' %}">Contact Us</a></span></li>
+        </ul>
+    </div>
+</nav>

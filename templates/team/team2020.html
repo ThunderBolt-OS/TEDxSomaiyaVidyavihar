@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'home/navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDx SVV TEAM 2020-2021</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'home/css/footer.css'%}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Scripts For Footer -->
+    <link href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'team/css/team_cards_old.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/teams_heading.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/main_title.css' %}">
+      <link rel="stylesheet" href="{% static 'team/css/team_sidenavbar.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/scrollbar.css' %}">
+
+    {% endblock %}    
+
+</head>
+<body>
+    <section class="team_title">
+      <h1 class="gradient-text">Organising Team 2020-2021</h1>
+    </section>
+
+    <section class="sidenavbar">
+      <div class="side">
+        <a href="{% url 'team:index' %}" style="background:#42db34;"><strong>2021-2022</strong></a>
+        <a href="{% url 'team:team2019' %}" style="background:#3498db;"><strong>2019-2020</strong></a>
+        <a href="{% url 'team:team2018' %}" style="background:#e74c3c;"><strong>2018-2019</strong></a>
+        <a href="{% url 'team:team2017' %}" style="background:#f1c40f;"><strong>2017-2018</strong></a>
+    </div>
+    </section>
+
+    <h1 class="header">Organisers</h1>
+    
+    <section class="team_card_body">
+      <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2022/radhaiyer.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Dr. Radha Iyer</h3>
+                    <span class="card__status">
+                      <i class="fas fa-envelope"></i>
+                      <i class="fas fa-phone"></i>
+                      <i class="fab fa-instagram"></i>
+                    </span>
+                  </div>
+                </div>
+                <p><br><br></p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2022/hetaldoshi.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Hetal Doshi</h3>
+                    <span class="card__status">
+                      <i class="fas fa-envelope" href="#"></i>
+                      <i class="fas fa-phone" href="#"></i>
+                      <i class="fab fa-instagram" href="#"></i>
+                    </span>
+                  </div>
+                </div>
+                <p><br><br></p>
+              </div>
+            </div>
+          </li>    
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Mentors</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/nitya.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Nitya Somaiya</h3>
+                    <span class="card__status">
+                        <a href="https://www.linkedin.com/in/nitya-somaiya-5001a79b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/munira.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Munira Ozarwala</h3>
+                    <span class="card__status">
+                      <br>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>    
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Co-Organisers</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2022/JAYANT.png' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Jayant Yadav [J.R.Y]</h3>
+                    <span class="card__status">
+                      <a href="mailto:jayantsvtedx@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="tel:7710864372"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description">Laconic, Decorous & Borderline Crazy.</p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2022/Rudra_Jog_e.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Rudra Jog</h3>
+                    <span class="card__status">
+                      <a href="mailto:rudra.jog@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="tel:9920437263"><i class="fas fa-phone"></i></a>
+                      <a href="https://www.instagram.com/rudeysipod/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description">Please ask the content team to come up with something good 😅</p>
+              </div>
+            </div>
+          </li>    
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header webdev">Web Designer</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/meetishah.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Meeti Shah</h3>
+                    <span class="card__status">
+                      <a href="mailto:meeti.shah@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/9324089054" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9324089054" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/toshan.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Toshan Luktuke</h3>
+                    <span class="card__status">
+                      <a href="mailto:toshan.l@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/7506832346" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:7506832346" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>     
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/amarvs.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Amar Vijaykumar Singh</h3>
+                    <span class="card__status">
+                      
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>     
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Tech Specialist</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/durgesh.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Durgesh Singh Rathore</h3>
+                    <span class="card__status">
+                      <a href="mailto:durgeshsingh.r@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8928533082" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:8928533082" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <ul class="cards">        
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/udit.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Udit Upadhyay</h3>
+                    <span class="card__status">
+                      <a href="mailto:udit.upadhyay@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8104316922" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:8104316922" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>    
+        </ul>
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Sponsorship Team</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/vishal.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Vishal Jalan</h3>
+                    <span class="card__status">
+                      <a href="mailto:vishal.jalan@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8541844518" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:7004890387" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>  
+        </ul>
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/ayesha1.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Ayesha Memon</h3>
+                    <span class="card__status">
+                      <a href="mailto:ayesha.am@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/9594398118" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9594398118" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>     
+        </ul>
+    </section>    
+
+    <br>
+    <br>
+
+    <h1 class="header">Graphic Design</h1>
+    <section class="team_card_body">
+        <ul class="cards">         
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/prathi.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Prathi Chopda</h3>
+                    <span class="card__status">
+                      <a href="mailto:prathi.chopda@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/9167054503" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9167054503" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li> 
+        </ul>        
+    </section>    
+    
+    <br>
+    <br>
+
+    <h1 class="header">Social Media Team</h1>
+    <section class="team_card_body">
+        <ul class="cards">        
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/shinjini.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Shinjini Bigharia</h3>
+                    <span class="card__status">
+                      <a href="mailto:s.bigharia@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/9987502904" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9987502904" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="cards">        
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/shruti.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Shruti Tyagi</h3>
+                    <span class="card__status">
+                      <a href="mailto:shruti.tyagi@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8828165824" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:8828165824" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>   
+        </ul>
+        <ul class="cards">        
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/vaibhav.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Vaibhav Vesmaker</h3>
+                    <span class="card__status">
+                      <a href="mailto:vaibhav.vesmaker@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/9820514125" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9820514125" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>   
+        </ul>
+    </section>
+    
+    <br>
+    <br>
+
+    <h1 class="header">Content Team</h1>
+    <section class="team_card_body">
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/ritika.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Ritika Punjabi</h3>
+                  <span class="card__status">
+                    <a href="mailto:ritika.punjabi@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/8169586676" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:8169586676" target="_blank"><i class="fas fa-phone"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/ananya.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Ananya Chetan</h3>
+                  <span class="card__status">
+                    <a href="mailto:ananya.chetan@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/9829012914" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9829012914" target="_blank"><i class="fas fa-phone"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>    
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/mayank.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Mayank Pujara</h3>
+                  <span class="card__status">
+                    <a href="mailto:mayank.pujara@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/9029942512" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9029942512" target="_blank"><i class="fas fa-phone"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+      </ul>
+      <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/swati.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Swati Joshi</h3>
+                  <span class="card__status">
+                    <a href="mailto:swati.dj@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/8600454758" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:8169346306" target="_blank"><i class="fas fa-phone"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2022/Avyay_Nair.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Avyay Nair</h3>
+                  <span class="card__status">
+                    <a href="mailto:avyay.nair@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/9167426667" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9167426667" target="_blank"><i class="fas fa-phone"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>   
+      </ul>      
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Event Management Team</h1>
+    <section class="team_card_body">
+        <ul class="cards">      
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/saloni.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Saloni Kaveri</h3>
+                  <span class="card__status">
+                    <a href="https://www.linkedin.com/in/saloni-kaveri-0366221ba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="{% static 'team/img/2021/kruthika.jpg' %}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                <div class="card__header-text">
+                  <h3 class="card__title">Kruthika Gangaraju</h3>
+                  <span class="card__status">
+                    <a href="https://www.linkedin.com/in/kruthika-gangaraju-716185167/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </span>
+                </div>
+              </div>
+              <p class="card__description"><br><br></p>
+            </div>
+          </div>
+        </li>
+        </ul>
+
+        <ul class="cards">      
+            <li>
+              <div class="card">
+                <img src="{% static 'team/img/2022/Ridhima_Sharma.jpeg' %}" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                    <div class="card__header-text">
+                      <h3 class="card__title">Ridhima Sharma</h3>
+                      <span class="card__status">
+                        <a href="mailto:ridhima.s@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/9137866724" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:9137866724" target="_blank"><i class="fas fa-phone"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card__description"><br><br></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="{% static 'team/img/2021/bhavika.jpg' %}" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                    <div class="card__header-text">
+                      <h3 class="card__title">Bhavika</h3>
+                      <span class="card__status">
+                        <a href="mailto:b.pratimamahajan@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/7986515140" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:7986515140" target="_blank"><i class="fas fa-phone"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card__description"><br><br></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="{% static 'team/img/2021/shreyarahate.jpg' %}" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                    <div class="card__header-text">
+                      <h3 class="card__title">Shreya Rahate</h3>
+                      <span class="card__status">
+                        <a href="https://www.linkedin.com/in/shreya-rahate-270479197/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card__description"><br><br></p>
+                </div>
+              </div>
+            </li>
+        </ul>     
+               
+        <ul class="cards">      
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/pranav.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Pranav Baldawa</h3>
+                    <span class="card__status">
+                      <a href="mailto:pranav.baldawa@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8412888176" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:9324581820" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/aanchal_singla.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Aanchal Singla</h3>
+                    <span class="card__status">
+                      <a href="mailto:aanchal.singla@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8837595477" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:8837595477" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>  
+        </ul>    
+    </section>
+
+    <br>
+    <br>
+
+    <h1 class="header">Video Production Team</h1>
+    <section class="team_card_body">
+        <ul class="cards">      
+            <li>
+              <div class="card">
+                <img src="{% static 'team/img/2022/Vrunda_Vadodaria.jpg' %}" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                    <div class="card__header-text">
+                      <h3 class="card__title">Vrunda Vadodaria</h3>
+                      <span class="card__status">
+                        <a href="mailto:vrunda.vadodaria@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/8976013285" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:8976013285" target="_blank"><i class="fas fa-phone"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card__description"><br><br></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="{% static 'team/img/2021/abhi_pillai.jpg' %}" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                    <div class="card__header-text">
+                      <h3 class="card__title">Abhishek Pillai</h3>
+                      <span class="card__status">
+                        <a href="mailto:a.pillai@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/8625981891" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:8625981891" target="_blank"><i class="fas fa-phone"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card__description"><br><br></p>
+                </div>
+              </div>
+            </li>
+        </ul>
+
+        <ul class="cards">      
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/devansh.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Devansh Dedhia</h3>
+                    <span class="card__status">
+                      <a href="https://www.linkedin.com/in/devansh-dedhia-317293194/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>
+      </ul>
+               
+        <ul class="cards">      
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/mayuri.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Mayuri Thevar</h3>
+                    <span class="card__status">
+                      <a href="mailto:m.thevar@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/8108429671" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:8419997182" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="{% static 'team/img/2021/omshah.jpg' %}" class="card__image" alt="" />
+              <div class="card__overlay">        
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <!--<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />-->
+                  <div class="card__header-text">
+                    <h3 class="card__title">Om Shah</h3>
+                    <span class="card__status">
+                      <a href="mailto:om.shah@somaiya.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                      <a href="https://wa.me/7021602637" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="tel:7021602637" target="_blank"><i class="fas fa-phone"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <p class="card__description"><br><br></p>
+              </div>
+            </div>
+          </li>  
+        </ul>
+    </section>
+
+    <br>
+    <br>
+</body>
+{% include 'home/footer1.html' %}
+</html>
