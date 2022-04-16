@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
@@ -159,6 +159,6 @@ STATICFILES_FINDERS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Activate Django-Heroku.
-django_heroku.settings(locals(),staticfiles=False)
+# django_heroku.settings(locals(),staticfiles=False)
 
 
