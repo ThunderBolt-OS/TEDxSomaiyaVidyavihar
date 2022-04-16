@@ -11,3 +11,9 @@ def index (request):
 def navbar (request):
   return render(request, "home/navbar.html")
 
+def error_404_view (request, exception):
+  return render(request, "home/404.html")
+
+def error_500_view (request):
+  return render(request, "home/500.html")
+
