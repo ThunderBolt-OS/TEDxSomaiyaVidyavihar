@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
@@ -31,7 +30,7 @@ SECRET_KEY = 'django-insecure-((3#_-w!#(emi9m+^asm^j+2xw9-2y0gp&mtitm_1=e0i4s^_n
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['https://tedxsomaiya.herokuapp.com', 'tedxsomaiya.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -156,7 +155,5 @@ STATICFILES_FINDERS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Activate Django-Heroku.
-django_heroku.settings(locals(),staticfiles=False)
 
 
